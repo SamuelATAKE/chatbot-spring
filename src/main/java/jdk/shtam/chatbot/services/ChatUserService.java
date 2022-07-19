@@ -9,11 +9,13 @@ import java.util.List;
 import jdk.shtam.chatbot.entities.ChatUser;
 import jdk.shtam.chatbot.repositories.ChatUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**
  *
  * @author Samuel
  */
+@Service
 public class ChatUserService {
     private final ChatUserRepository repository;
 

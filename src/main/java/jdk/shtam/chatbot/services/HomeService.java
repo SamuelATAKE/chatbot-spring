@@ -7,11 +7,13 @@ package jdk.shtam.chatbot.services;
 
 import com.twilio.Twilio;
 import com.twilio.rest.api.v2010.account.Message;
+import org.springframework.stereotype.Service;
 
 /**
  *
  * @author Samuel
  */
+@Service
 public class HomeService {
     private final String ACCOUNT_SID = "AC3e4fb0da0e50f64748d3b57722ae436b";
     private final String AUTH_TOKEN = "98a517dcc53cdc6e57acb965aca1e324";

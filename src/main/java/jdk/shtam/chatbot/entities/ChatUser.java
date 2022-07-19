@@ -7,6 +7,10 @@ package jdk.shtam.chatbot.entities;
 
 import java.util.Objects;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 
 /**
  *
@@ -14,6 +18,16 @@ import javax.persistence.Entity;
  */
 @Entity
 public class ChatUser {
+    @Id
+    @SequenceGenerator(
+            name = "chatUserSequence",
+            sequenceName = "chatUserSequence",
+            allocationSize = 1
+    )
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "chatUserSequence"
+    )
     private Long id;
     private String sid;
     private String telephone;
